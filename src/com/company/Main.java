@@ -2,9 +2,10 @@ package com.company;
 
 public class Main {
 
+
     public static Hero[] heroArray = new Hero[3];
 
-    public static void getCreateHero(){
+    public static Hero[] getCreateHero(){
 
         Hero hero1 = new Hero(300,30);
         Hero hero2 = new Hero(400, 25);
@@ -14,6 +15,7 @@ public class Main {
         heroArray[1] = hero2;
         heroArray[2] = hero3;
 
+        return heroArray;
     }
 
     public static void main(String[] args) {
@@ -26,14 +28,14 @@ public class Main {
 
             getCreateHero();
 
-        for (int i = 0; i < heroArray.length; i++) {
-
-            System.out.println("Hero " + (i + 1));
+        for (int i = 0; i < getCreateHero().length; i++) {
 
             System.out.println("Health = " + heroArray[i].getHealth() + " /Damage = " + heroArray[i].getDamage()
                     + " /Super Ability = " + heroArray[i].getSuperAbility());
 
         }
+
+
     }
 
 
